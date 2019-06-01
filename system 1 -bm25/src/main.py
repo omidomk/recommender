@@ -2,7 +2,7 @@ from parse import *
 from query import QueryProcessor
 import operator
 from receive import *
-
+from sender import send
 
 def main():
 	#must get queries or user prefeered categories from receive.py not queries.txt
@@ -24,7 +24,7 @@ def main():
 			print '{:>1}\tQ0\t{:>4}\t{:>2}\t{:>12}\tNH-BM25'.format(*tmp)
 			index += 1
 		qid += 1
-
+	send()
 
 if __name__ == '__main__':
 	main()
