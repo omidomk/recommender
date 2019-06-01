@@ -7,7 +7,7 @@ from sender import send
 def main():
 	#must get queries or user prefeered categories from receive.py not queries.txt
 	#qp = QueryParser(filename='../text/queries.txt')
-	qp=receive(1000)
+	qp=receive('1000')
 	cp = CorpusParser(filename='../text/corpus.txt')
 	qp.parse()
 	queries = qp.get_queries()
