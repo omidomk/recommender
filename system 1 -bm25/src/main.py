@@ -1,9 +1,11 @@
 from parse import *
 from query import QueryProcessor
 import operator
+from receive import *
 
 
 def main():
+	#must get queries or user prefeered categories from receive.py not queries.txt
 	qp = QueryParser(filename='../text/queries.txt')
 	cp = CorpusParser(filename='../text/corpus.txt')
 	qp.parse()
