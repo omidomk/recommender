@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import requests
-def send()   
+def send():  
     # Data needs to be replaced by article data!!!!!!!
     #get data from bm25
     data = {
