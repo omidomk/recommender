@@ -3,9 +3,9 @@ import requests
 import json
   
 def receive( number): 
-    #first receive list of all users ids
+    
     resp_get=requests.get("http://localhost/userfeedback", headers={"api_key": "355b36dc-7863-4c4a-a088-b3c5e297f04f"})
-   resps = resp_get.json()
+    resps = resp_get.json()
     list=[]
     article=[]
     score=[]
@@ -19,6 +19,6 @@ def receive( number):
           score[i].apppend(articlesdict[key])
         
         i += 1
-        
+        #then this data should be saved in system databse
         
     return;
