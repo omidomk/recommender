@@ -46,7 +46,7 @@ from pprint import pprint, pformat
 from elasticsearch import Elasticsearch
 from elasticsearch import helpers
 
-from nordlys.config import ELASTIC_HOSTS, ELASTIC_SETTINGS
+from config import ELASTIC_HOSTS, ELASTIC_SETTINGS
 
 
 class Elastic(object):

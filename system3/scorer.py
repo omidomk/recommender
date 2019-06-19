@@ -9,9 +9,9 @@ Various retrieval models for scoring a individual document for a given query.
 import math
 import sys
 
-from nordlys.core.retrieval.elastic import Elastic
-from nordlys.core.retrieval.elastic_cache import ElasticCache
-from nordlys.config import PLOGGER
+from elastic import Elastic
+from elastic_cache import ElasticCache
+from config import PLOGGER
 
 
 class Scorer(object):

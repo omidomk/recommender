@@ -20,7 +20,7 @@ Usage hints
 """
 from collections import defaultdict
 
-from nordlys.core.retrieval.elastic import Elastic
+from elastic import Elastic
 
 
 class ElasticCache(Elastic):

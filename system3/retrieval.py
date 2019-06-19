@@ -69,13 +69,13 @@ from elastic import Elastic
 from elastic_cache import ElasticCache
 from scorer import Scorer, ScorerLM
 from file_utils import FileUtils
-from nordlys.config import PLOGGER
+from config import PLOGGER
 
 
 class Retrieval(object):
     FIELDED_MODELS = {"mlm", "prms"}
     LM_MODELS = {"lm", "mlm", "prms"}
-
+    finalresults = {}
     def __init__(self, config):
         self.check_config(config)
         self.__config = config
@@ -203,6 +203,20 @@ class Retrieval(object):
         open(self.__output_file, "w").write("")
         out = open(self.__output_file, "w")
 
+          # type: Any
+        #finalresults["recommendations"][userid].append({"article_id": doc_id, "score": str(score["score"])})
+
+        arr=[]
+        #make json for arxivdigest
+        #query id is the same as user id and query itsself is concatened user prefrences
+        for query_id in sorted(queries):
+
+            results = self.retrieve(queries[query_id])
+            out.write(self.arxivdigest_format(results, query_id, self.__num_docs))
+        out.close()
+
+
+
         # retrieves documents
         for query_id in sorted(queries):
             PLOGGER.info("scoring [" + query_id + "] " + queries[query_id])
@@ -210,6 +224,23 @@ class Retrieval(object):
             out.write(self.trec_format(results, query_id, self.__num_docs))
         out.close()
         PLOGGER.info("Output file:" + self.__output_file)
+
+
+
+    def arxivdigest_format(self, results, query_id, max_rank=100):
+        """Outputs results in TREC format"""
+
+        rank = 1
+        arr=[]
+
+        for doc_id, score in sorted(results.items(), key=lambda x: x[1]["score"], reverse=True):
+            if rank > max_rank:
+                break
+
+            arr.append({"article_id": doc_id, "score": str(score["score"])})
+            rank += 1
+        Retrieval.finalresults["recommendations"].update({query_id: arr})
+        return Retrieval.finalresults
 
     def trec_format(self, results, query_id, max_rank=100):
         """Outputs results in TREC format"""
@@ -232,7 +263,7 @@ def arg_parser():
 
 def get_config():
     example_config = {"index_name": "toy_index",
-                      "query_file": "data/dbpedia-entity-v1/queries/test_queries2.json",
+                      "query_file": "queries.json",
                       "first_pass": {
                           "num_docs": 10,
                           "field": "content",
@@ -257,7 +288,7 @@ def main(args):
 
     e_t = time.time()  # end time
     print("Execution time(min):\t" + str((e_t - s_t) / 60) + "\n")
-
+    return r.finalresults
 
 if __name__ == "__main__":
     main(arg_parser())
