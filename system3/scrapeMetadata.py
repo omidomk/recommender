@@ -16,6 +16,7 @@ import urllib
 from time import strftime, sleep
 import datetime
 import feedparser
+import  categories as cat
 
 OAI = '{http://www.openarchives.org/OAI/2.0/}'
 ARXIV = '{http://arxiv.org/OAI/arXiv/}'
@@ -24,10 +25,14 @@ ARXIV = '{http://arxiv.org/OAI/arXiv/}'
 def prepareRecord(record):
     '''Formats the data to a dictionary structure that is easy to work with'''
     info = record.find(OAI + 'metadata').find(ARXIV + 'arXiv')
+    completecatname=[]
+    for x in info.find(ARXIV + 'categories').text.split():
+        completecatname.append(cat.subCategoryNames.get(x))
+    ##############################################
     result = {'title': info.find(ARXIV + 'title').text.replace('\n', ' '),
               'description': info.find(ARXIV + 'abstract').text.replace('\n', ' '),
               'id': info.find(ARXIV + 'id').text,
-              'categories': info.find(ARXIV + 'categories').text.split(),
+              'categories': completecatname,
               }
     doi = info.find(ARXIV + 'doi')
     comments = info.find(ARXIV + 'comments')
@@ -126,8 +131,12 @@ def getCategories():
     result = {}
     for category in categories:
         categoryID = category.find(OAI + 'setSpec').text
+
         categoryName = category.find(OAI + 'setName').text
+
+
         categoryInfo = {'name': categoryName}
+
         categoryID = categoryID.split(':')
         if len(categoryID) > 1:
             categoryInfo['masterCategory'] = categoryID[0].capitalize()
@@ -161,7 +170,6 @@ def harvestMetadataRss():
             result[element['id']] = element
         else:
             result[item] = articles[item]
-        for state, capital in result.items():
-            print(state, ":", capital)
     return result
 
+harvestMetadataRss()

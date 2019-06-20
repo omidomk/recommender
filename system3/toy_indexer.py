@@ -30,7 +30,7 @@ def main():
 
 
 
-    docs = {
+    example = {
         1: {"title": "Rap God",
             "content": "gonna, gonna, Look, I was gonna go easy on you and not to hurt your feelings"
             },
@@ -47,12 +47,12 @@ def main():
             "content": "Lately I've been hard to reach I've been too long on my own Everybody has a private world Where they can be alone"
             }
     }
-
+    results = scrapeMetadata.harvestMetadataRss()
     elastic = Elastic(index_name)
     elastic.create_index(mappings, force=True)
-    elastic.add_docs_bulk(docs)
+    elastic.add_docs_bulk(results)
     print("index has been built")
-    results = scrapeMetadata.harvestMetadataRss()
+
 
 
 if __name__ == "__main__":
