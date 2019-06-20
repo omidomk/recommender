@@ -171,5 +171,3 @@ def harvestMetadataRss():
         else:
             result[item] = articles[item]
     return result
-
-harvestMetadataRss()
