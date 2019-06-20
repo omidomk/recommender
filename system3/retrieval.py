@@ -206,15 +206,6 @@ class Retrieval(object):
           # type: Any
         #finalresults["recommendations"][userid].append({"article_id": doc_id, "score": str(score["score"])})
 
-        arr=[]
-        #make json for arxivdigest
-        #query id is the same as user id and query itsself is concatened user prefrences
-        for query_id in sorted(queries):
-
-            results = self.retrieve(queries[query_id])
-            out.write(self.arxivdigest_format(results, query_id, self.__num_docs))
-        out.close()
-
 
 
         # retrieves documents
@@ -222,6 +213,7 @@ class Retrieval(object):
             PLOGGER.info("scoring [" + query_id + "] " + queries[query_id])
             results = self.retrieve(queries[query_id])
             out.write(self.trec_format(results, query_id, self.__num_docs))
+	    out.write(self.arxivdigest_format(results, query_id, self.__num_docs))
         out.close()
         PLOGGER.info("Output file:" + self.__output_file)
 
