@@ -8,21 +8,25 @@ Toy indexing example for testing purposes.
 """
 from elastic import Elastic
 import scrapeMetadata
+import json
+from elasticsearch import Elasticsearch
+from config import ELASTIC_HOSTS, ELASTIC_SETTINGS
 
 def main():
-    index_name = "toy_index"
+    index_name = "arxiv"
 
     mappings = {
+        #Elastic.FIELD_CATCHALL: Elastic.analyzed_field(),
         "title": Elastic.analyzed_field(),
         "description": Elastic.analyzed_field(),
-        "id": Elastic.analyzed_field(),
+        "id": Elastic.notanalyzed_searchable_field(),
         "categories": Elastic.analyzed_field(),
-        "doi": Elastic.analyzed_field(),
+        "doi": Elastic.notanalyzed_searchable_field(),
         "comments": Elastic.analyzed_field(),
-        "license": Elastic.analyzed_field(),
+        "license": Elastic.notanalyzed_searchable_field(),
         "journal": Elastic.analyzed_field(),
         "authors": Elastic.analyzed_field(),
-        "datestamp": Elastic.analyzed_field(),
+        "datestamp": Elastic.notanalyzed_searchable_field(),
     }
 
 
@@ -48,9 +52,18 @@ def main():
             }
     }
     results = scrapeMetadata.harvestMetadataRss()
+    with open('articles.json', 'w') as file:
+        file.write(json.dumps(results))
+
     elastic = Elastic(index_name)
-    elastic.create_index(mappings, force=True)
-    elastic.add_docs_bulk(results)
+    es=Elasticsearch(hosts=ELASTIC_HOSTS)
+    if (es.indices.exists(index_name)):
+        elastic.create_index(mappings)
+        elastic.add_docs_bulk(results)
+        print("new index created")
+    else:
+        elastic.add_docs_bulk(results)
+        print(" index updated")
     print("index has been built")
 
 

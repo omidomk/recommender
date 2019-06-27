@@ -16,7 +16,9 @@ import urllib
 from time import strftime, sleep
 import datetime
 import feedparser
-import  categories as cat
+import categories as cat
+from operator import is_not
+from functools import partial
 
 OAI = '{http://www.openarchives.org/OAI/2.0/}'
 ARXIV = '{http://arxiv.org/OAI/arXiv/}'
@@ -28,6 +30,8 @@ def prepareRecord(record):
     completecatname=[]
     for x in info.find(ARXIV + 'categories').text.split():
         completecatname.append(cat.subCategoryNames.get(x))
+    #completecatname=['None' if v is None else v for v in completecatname]
+    #strcat = ''.join(completecatname)
     ##############################################
     result = {'title': info.find(ARXIV + 'title').text.replace('\n', ' '),
               'description': info.find(ARXIV + 'abstract').text.replace('\n', ' '),
@@ -54,12 +58,17 @@ def prepareRecord(record):
         a['affiliations'] = []
         for affiliation in author.findall(ARXIV + 'affiliation'):
             a['affiliations'].append(affiliation.text)
+        test = ' '.join(str(x) for x in a.values())
+        authors.append(test)
 
-        authors.append(a)
     result['authors'] = authors
     datestamp = record.find(OAI + 'header').find(OAI + 'datestamp')
     result['datestamp'] = datestamp.text
-
+    """
+    for field in result:
+        result[field] = list(set(result[field]))
+        result[Elastic.FIELD_CATCHALL] += result[field]
+    """
     return result
 
 

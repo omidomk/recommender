@@ -1,0 +1,275 @@
+{
+  "took" : 213,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 934,
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : "arxiv",
+        "_type" : "doc",
+        "_id" : "1906.01735",
+        "_score" : 1.0,
+        "_source" : {
+          "title" : "Late time approach to Hawking radiation: terms beyond leading order",
+          "description" : "  Black hole evaporation is studied using wave packets for the modes. These allow for approximate frequency and time resolution. The leading order late time behavior gives the well known Hawking radiation that is independent of how the black hole formed. The focus here is on the higher order terms and the rate at which they damp at late times. Some of these terms carry information about how the black hole formed. A general argument is given which shows that the damping is significantly slower (power law) than what might be naively expected from a stationary phase approximation (exponential). This result is verified by numerical calculations in the cases of 2D and 4D black holes that form from the collapse of a null shell. ",
+          "id" : "1906.01735",
+          "categories" : [
+            "General Relativity and Quantum Cosmology",
+            "High Energy Physics - Theory"
+          ],
+          "doi" : null,
+          "comments" : "Improved version, significant changes in the presentation, minor\n  errors corrected, main conclusions unchanged",
+          "license" : "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+          "journal" : null,
+          "authors" : [
+            "Paul R. Anderson []",
+            "Raymond D. Clark []",
+            "Alessandro Fabbri []",
+            "Michael R. R. Good []"
+          ],
+          "datestamp" : "2019-06-26"
+        }
+      },
+      {
+        "_index" : "arxiv",
+        "_type" : "doc",
+        "_id" : "1906.10367",
+        "_score" : 1.0,
+        "_source" : {
+          "title" : "Ultra-sensitive gas phase spectroscopy using an innovative high finesse   Terahertz Fabry-P\\'erot cavity",
+          "description" : "  THz and submillimeter gas phase spectroscopy appears as the perfect tool for analytical chemical analysis due an exceptional degree of resolution. Despite many attractive applications such as breath analysis, environmental surveillance, food spoilage monitoring, or detection of explosive taggants, there is no commercially available versatile THz or submillimeter chemical analyzer. An important factor hindering the development of a THz chemical analyzer are the difficulties encountered to adapt ultrasensitive techniques, such as Cavity-Enhanced Techniques and Cavity Ring Down Spectroscopy to the THz and submillimeter domain. Here, we describe a low-cost high finesse THz resonator based on a low loss oversized corrugated waveguide along with high reflective photonic mirrors, and how those critical components enable a Fabry-Perot THz Absorption Spectrometer obtaining a kilometer equivalent interaction length. In addition, the intracavity optical power have allowed nonlinear interactions such as Lamb-Dip effect to be studied with a low-power emitter. ",
+          "id" : "1906.10367",
+          "categories" : [
+            "Optics",
+            "Instrumentation and Detectors"
+          ],
+          "doi" : null,
+          "comments" : "8 pages, 4 figures",
+          "license" : "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+          "journal" : null,
+          "authors" : [
+            "Francis Hindle []",
+            "Robin Bocquet []",
+            "Anastasiia Pienkina []",
+            "Arnaud Cuisset []",
+            "Gaël Mouret []"
+          ],
+          "datestamp" : "2019-06-26"
+        }
+      },
+      {
+        "_index" : "arxiv",
+        "_type" : "doc",
+        "_id" : "1901.10808",
+        "_score" : 1.0,
+        "_source" : {
+          "title" : "A RIXS investigation of the crystal-field splitting of Sm$^{3+}$ in   SmB$_6$",
+          "description" : "  The crystal-field (CF) splitting of the $^6H_{5/2}$ Hund's rule ground state of Sm$^{3+}$ in the strongly correlated topological insulator SmB$_6$ has been determined with high resolution resonant inelastic x-ray scattering (RIXS) at the Sm M$_5$ edge. The valence selectivity of RIXS allows isolating the crystal-field-split excited multiplets of the Sm$^{3+}$ (4$f^5$) configuration from those of Sm$^{2+}$ (4$f^6$) in intermediate valent SmB$_6$. The very large energy range of RIXS allows the crystal-field analysis of a high lying multiplet at about 2.4\\,eV that has the same total angular momentum $J$ as the ground state so that ambiguities due to the elastic tail can be avoided. We find that the $\\Gamma_7$ doublet and $\\Gamma_8$ quartet of the $^6H_{5/2}$ Hund's rule ground state are split by $\\Delta^{CF}_{^6H_{5/2}}$\\,=\\,20$\\pm$10\\,meV which sets an upper limit for the 4$f$ band width. This indicates an extremely large mass renormalization from the band structure value, pointing out the need to consider the coefficients of fractional parentage for the hopping of the 4$f$ electrons. ",
+          "id" : "1901.10808",
+          "categories" : [
+            "Strongly Correlated Electrons"
+          ],
+          "doi" : null,
+          "comments" : "8 pages, 6 figures",
+          "license" : "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+          "journal" : null,
+          "authors" : [
+            "Andrea Amorese []",
+            "Oliver Stockert []",
+            "Kurt Kummer []",
+            "Nickolas B. Brookes []",
+            "Dae-Jeong Kim []",
+            "Zachary Fisk []",
+            "Maurits W. Haverkort []",
+            "Peter Thalmeier []",
+            "Liu Hao Tjeng []",
+            "Andrea Severing []"
+          ],
+          "datestamp" : "2019-06-26"
+        }
+      },
+      {
+        "_index" : "arxiv",
+        "_type" : "doc",
+        "_id" : "1904.09071",
+        "_score" : 1.0,
+        "_source" : {
+          "title" : "On Itzykson-Zuber Ansatz",
+          "description" : "  We apply the renormalized coupling constants and Virasoro constraints to derive the Itzykson-Zuber Ansatz on the form of the free energy in topological 2D gravity. We also treat the topological 1D gravity and the Hermitian one-matrix models in the same fashion. Some uniform behaviors are discovered in this approach. ",
+          "id" : "1904.09071",
+          "categories" : [
+            "Mathematical Physics",
+            "High Energy Physics - Theory",
+            "Mathematical Physics"
+          ],
+          "doi" : null,
+          "comments" : "We make some changes in the Introduction and Section 5. A reference\n  is added",
+          "license" : "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+          "journal" : null,
+          "authors" : [
+            "Qingsheng Zhang []",
+            "Jian Zhou []"
+          ],
+          "datestamp" : "2019-06-26"
+        }
+      },
+      {
+        "_index" : "arxiv",
+        "_type" : "doc",
+        "_id" : "1906.10363",
+        "_score" : 1.0,
+        "_source" : {
+          "title" : "Accelerating Universe with a stable extra dimension in cuscuton gravity",
+          "description" : "  We study Kaluza-Klein cosmology in cuscuton gravity and find an exact solution describing an accelerating 4-dimensional universe with a stable extra dimension. A cuscuton which is a non-dynamical scalar field is responsible for the accelerating expansion and a vector field makes the extra dimensional space stable. Remarkably, the accelerating universe in our model is not exactly de Sitter. ",
+          "id" : "1906.10363",
+          "categories" : [
+            "General Relativity and Quantum Cosmology",
+            "Cosmology and Nongalactic Astrophysics",
+            "High Energy Physics - Theory"
+          ],
+          "doi" : null,
+          "comments" : "10 pages",
+          "license" : "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+          "journal" : null,
+          "authors" : [
+            "Asuka Ito []",
+            "Yuki Sakakihara []",
+            "Jiro Soda []"
+          ],
+          "datestamp" : "2019-06-26"
+        }
+      },
+      {
+        "_index" : "arxiv",
+        "_type" : "doc",
+        "_id" : "1906.10381",
+        "_score" : 1.0,
+        "_source" : {
+          "title" : "General solutions of the leakage in integral transforms and applications   to the EB-leakage and detection of the cosmological gravitational waves",
+          "description" : "  For an orthogonal integral transform with complete dataset, any two components are linearly independent; however, when some data points are missing, there is going to be leakage from one component to another, which is referred to as the ``leakage in integral transforms'' in this work. A special case of this kind of leakage is the EB-leakage in detection of the cosmological gravitational waves (CGW). We first give the general solutions for all integral transforms, prove that they are the best solutions, and then apply them to the case of EB-leakage and detection of the CGW. In the upcoming decade, all cosmic microwave background (CMB) experiments are ground based, so they provide only partial sky coverage. Within this context, the EB-leakage becomes inevitable. We show how to use the general solutions to achieve the minimal error bars of the EB-leakage, and use it to find out the maximal ability to detect the CGW through CMB. The results show that $1\\%$ sky coverage ($f_{sky}=1\\%$) is enough for a $5\\sigma$-detection of $r\\ge 10^{-2}$, but is barely enough for $r=10^{-3}$. If the target is to detect $r\\sim 10^{-4}$ or $10^{-5}$, then $f_{sky}\\ge 10\\%$ or higher is strongly recommended to enable a $5\\sigma$-detection and to reserve some room for other errors. ",
+          "id" : "1906.10381",
+          "categories" : [
+            "Cosmology and Nongalactic Astrophysics"
+          ],
+          "doi" : null,
+          "comments" : "17 pages, 6 figures, 2 appendices",
+          "license" : "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+          "journal" : null,
+          "authors" : [
+            "Hao Liu []"
+          ],
+          "datestamp" : "2019-06-26"
+        }
+      },
+      {
+        "_index" : "arxiv",
+        "_type" : "doc",
+        "_id" : "1906.10484",
+        "_score" : 1.0,
+        "_source" : {
+          "title" : "Renormalisation of pair correlations and their Fourier transforms for   primitive block substitutions",
+          "description" : "  For point sets and tilings that can be constructed with the projection method, one has a good understanding of the correlation structure, and also of the corresponding spectra, both in the dynamical and in the diffraction sense. For systems defined by substitution or inflation rules, the situation is less favourable, in particular beyond the much-studied class of Pisot substitutions. In this contribution, the geometric inflation rule is employed to access the pair correlation measures of self-similar and self-affine inflation tilings and their Fourier transforms by means of exact renormalisation relations. In particular, we look into sufficient criteria for the absence of absolutely continuous spectral contributions, and illustrate this with examples from the class of block substitutions. We also discuss the Frank-Robinson tiling, as a planar example with infinite local complexity and singular continuous spectrum. ",
+          "id" : "1906.10484",
+          "categories" : [
+            "Dynamical Systems"
+          ],
+          "doi" : null,
+          "comments" : "32 pages, 6 figures",
+          "license" : "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+          "journal" : null,
+          "authors" : [
+            "Michael Baake ['Bielefeld']",
+            "Uwe Grimm ['Milton Keynes']"
+          ],
+          "datestamp" : "2019-06-26"
+        }
+      },
+      {
+        "_index" : "arxiv",
+        "_type" : "doc",
+        "_id" : "1906.10600",
+        "_score" : 1.0,
+        "_source" : {
+          "title" : "Even-to-Odd Barium Isotope Ratio in Selected Galactic Halo Stars",
+          "description" : "  We have updated the Ba II model atom by taking into account the H I impact excitation with the rate coefficients from the quantum-mechanical calculations of Belyaev and Yakovleva (2018). Using high-resolution stellar spectra and the non-local thermodynamic equilibrium (non-LTE) line formation for Ba II, we have determined the fraction of barium isotopes with an odd mass number (fodd}) in four Galactic halo giants with well-known atmospheric parameters. We use a method based on the requirement that the abundances from the Ba II 4554 A resonance and Ba II 5853, 6496 A subordinate lines be equal. An accuracy of 0.04 dex in determining the barium abundance from individual lines has been achieved. In three stars (HD 2796, HD 108317, and HD 122563) fodd >= 0.4. This suggests that >= 80 % of the barium observed in these stars was synthesized in the r-process. In HD 128279 fodd = 0.27 exceeds the fraction of odd barium isotopes in the Solar system, but only slightly. The dominance of the r-process at the formation epoch of our sample stars is confirmed by the presence of a europium overabundance relative barium, with [Eu/Ba] > 0.3. We have calculated the non-LTE abundance corrections for five Ba II lines and investigated their dependence on atmospheric parameters in the ranges of effective temperatures from 4500 to 6500 K, surface gravities log g from 0.5 to 4.5, and metallicities [Fe/H] from 0 to -3. ",
+          "id" : "1906.10600",
+          "categories" : [
+            "Solar and Stellar Astrophysics"
+          ],
+          "doi" : null,
+          "comments" : "16 pages, 5 figures, and 4 tables. Published in Astron. Letters, vol.\n  45, p. 341-352 (2019)",
+          "license" : "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+          "journal" : "Astronomy Letters, vol. 45, p. 341-352 (2019)",
+          "authors" : [
+            "Lyudmila Mashonkina []",
+            "Andrey K. Belyaev []"
+          ],
+          "datestamp" : "2019-06-26"
+        }
+      },
+      {
+        "_index" : "arxiv",
+        "_type" : "doc",
+        "_id" : "1904.10636",
+        "_score" : 1.0,
+        "_source" : {
+          "title" : "Entrance Effects in Concentration-Gradient-Driven Flow Through an   Ultrathin Porous Membrane",
+          "description" : "  Transport of liquid mixtures through porous membranes is central to processes such as desalination, chemical separations and energy harvesting, with ultrathin membranes made from novel 2D nanomaterials showing exceptional promise. Here we derive, for the first time, general equations for the solution and solute fluxes through a circular pore in an ultrathin planar membrane induced by a solute concentration gradient. We show that the equations accurately capture the fluid fluxes measured in finite-element numerical simulations for weak solute-membrane interactions. We also derive scaling laws for these fluxes as a function of the pore size and the strength and range of solute-membrane interactions. These scaling relationships differ markedly from those for concentration-gradient-driven flow through a long cylindrical pore or for flow induced by a pressure gradient or electric field through a pore in an ultrathin membrane. These results have broad implications for transport of liquid mixtures through membranes with a thickness on the order of the characteristic pore size. ",
+          "id" : "1904.10636",
+          "categories" : [
+            "Soft Condensed Matter",
+            "Mesoscale and Nanoscale Physics",
+            "Materials Science",
+            "Chemical Physics",
+            "Fluid Dynamics"
+          ],
+          "doi" : null,
+          "comments" : null,
+          "license" : "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+          "journal" : null,
+          "authors" : [
+            "Daniel J. Rankin []",
+            "Lydéric Bocquet []",
+            "David M. Huang []"
+          ],
+          "datestamp" : "2019-06-26"
+        }
+      },
+      {
+        "_index" : "arxiv",
+        "_type" : "doc",
+        "_id" : "1906.10506",
+        "_score" : 1.0,
+        "_source" : {
+          "title" : "GaussPy+: A fully automated Gaussian decomposition package for emission   line spectra",
+          "description" : "  Our understanding of the dynamics of the interstellar medium is informed by the study of the detailed velocity structure of emission line observations. One approach to study the velocity structure is to decompose the spectra into individual velocity components; this leads to a description of the dataset that is significantly reduced in complexity. However, this decomposition requires full automation lest it becomes prohibitive for large datasets, such as Galactic plane surveys. We developed GaussPy+, a fully automated Gaussian decomposition package that can be applied to emission line datasets, especially large surveys of HI and isotopologues of CO. We built our package upon the existing GaussPy algorithm and significantly improved its performance for noisy data. New functionalities of GaussPy+ include: i) automated preparatory steps, such as an accurate noise estimation, which can also be used as standalone applications; ii) an improved fitting routine; iii) an automated spatial refitting routine that can add spatial coherence to the decomposition results by refitting spectra based on neighbouring fit solutions. We thoroughly tested the performance of GaussPy+ on synthetic spectra and a test field from the Galactic Ring Survey. We found that GaussPy+ can deal with cases of complex emission and even low to moderate signal-to-noise values. ",
+          "id" : "1906.10506",
+          "categories" : [
+            "Instrumentation and Methods for Astrophysics",
+            "Astrophysics of Galaxies"
+          ],
+          "doi" : null,
+          "comments" : "Accepted for publication in A&A. 36 pages, 33 figures (main text: 23\n  pages, 18 figures; Appendix: 13 pages, 15 figures). The GaussPy+ package is\n  written in Python 3 and is freely available at GitHub under\n  https://github.com/mriener/gausspyplus",
+          "license" : "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+          "journal" : null,
+          "authors" : [
+            "Manuel Riener []",
+            "Jouni Kainulainen []",
+            "Jonathan D. Henshaw []",
+            "Jan H. Orkisz []",
+            "Claire E. Murray []",
+            "Henrik Beuther []"
+          ],
+          "datestamp" : "2019-06-26"
+        }
+      }
+    ]
+  }
+}

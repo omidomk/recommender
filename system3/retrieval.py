@@ -213,7 +213,8 @@ class Retrieval(object):
             PLOGGER.info("scoring [" + query_id + "] " + queries[query_id])
             results = self.retrieve(queries[query_id])
             out.write(self.trec_format(results, query_id, self.__num_docs))
-	    out.write(self.arxivdigest_format(results, query_id, self.__num_docs))
+
+        out.write(self.arxivdigest_format((results), query_id, self.__num_docs))
         out.close()
         PLOGGER.info("Output file:" + self.__output_file)
 
@@ -231,8 +232,8 @@ class Retrieval(object):
 
             arr.append({"article_id": doc_id, "score": str(score["score"])})
             rank += 1
-        Retrieval.finalresults["recommendations"].update({query_id: arr})
-        return Retrieval.finalresults
+        Retrieval.finalresults.update(recommendations={query_id: arr})
+        return str(Retrieval.finalresults)
 
     def trec_format(self, results, query_id, max_rank=100):
         """Outputs results in TREC format"""
@@ -248,13 +249,13 @@ class Retrieval(object):
 
 def arg_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument("config", help="config file", type=str)
+    ####parser.add_argument("config", help="config file", type=str)
     args = parser.parse_args()
     return args
 
 
 def get_config():
-    example_config = {"index_name": "toy_index",
+    example_config = {"index_name": "arxiv",
                       "query_file": "queries.json",
                       "first_pass": {
                           "num_docs": 10,
@@ -274,7 +275,8 @@ def get_config():
 def main(args):
     s_t = time.time()  # start time
 
-    config = FileUtils.load_config(args.config) if args.config != "" else get_config()
+    #config = FileUtils.load_config(args.config) if args.config != "" else get_config()
+    config = get_config()
     r = Retrieval(config)
     r.batch_retrieval()
 

@@ -244,7 +244,7 @@ class Elastic(object):
         :return: dictionary of document IDs with scores
         """
         hits = self.__es.search(index=self.__index_name, q=query, df=field, _source=False, size=num,
-                                fielddata_fields=fields_return, from_=start)["hits"]["hits"]
+                                 from_=start)["hits"]["hits"]
         results = {}
         for hit in hits:
             results[hit["_id"]] = {"score": hit["_score"], "fields": hit.get("fields", {})}

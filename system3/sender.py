@@ -1,7 +1,5 @@
 #!/usr/bin/python
 import requests
-import retrieval
-
 import json
 import retrieval
 from typing import Any
