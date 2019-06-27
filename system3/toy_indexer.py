@@ -58,13 +58,14 @@ def main():
     elastic = Elastic(index_name)
     es=Elasticsearch(hosts=ELASTIC_HOSTS)
     if (es.indices.exists(index_name)):
+        elastic.add_docs_bulk(results)
+        print(" index updated")
+
+    else:
         elastic.create_index(mappings)
         elastic.add_docs_bulk(results)
         print("new index created")
-    else:
-        elastic.add_docs_bulk(results)
-        print(" index updated")
-    print("index has been built")
+    
 
 
 
