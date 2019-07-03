@@ -5,6 +5,7 @@ Toy Indexer
 Toy indexing example for testing purposes.
 
 :Authors: Krisztian Balog, Faegheh Hasibi
+small edits by Omid Mohammadi Kia
 """
 from elastic import Elastic
 import scrapeMetadata
@@ -51,19 +52,19 @@ def main():
             "content": "Lately I've been hard to reach I've been too long on my own Everybody has a private world Where they can be alone"
             }
     }
-    results = scrapeMetadata.harvestMetadataRss()
+    scrapresults = scrapeMetadata.harvestMetadataRss()
     with open('articles.json', 'w') as file:
-        file.write(json.dumps(results))
+        file.write(json.dumps(scrapresults))
 
     elastic = Elastic(index_name)
     es=Elasticsearch(hosts=ELASTIC_HOSTS)
     if (es.indices.exists(index_name)):
-        elastic.add_docs_bulk(results)
+        elastic.add_docs_bulk(scrapresults)
         print(" index updated")
 
     else:
         elastic.create_index(mappings)
-        elastic.add_docs_bulk(results)
+        elastic.add_docs_bulk(scrapresults)
         print("new index created")
     
 
