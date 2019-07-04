@@ -25,11 +25,15 @@ ARXIV = '{http://arxiv.org/OAI/arXiv/}'
 
 
 def prepareRecord(record):
+    # Load
+    read_category= np.load('CategoryDict.npy').item()
+    
     '''Formats the data to a dictionary structure that is easy to work with'''
     info = record.find(OAI + 'metadata').find(ARXIV + 'arXiv')
     completecatname=[]
     for x in info.find(ARXIV + 'categories').text.split():
-        completecatname.append(cat.subCategoryNames.get(x))
+        completecatname.append(read_category[x])
+        #completecatname.append(cat.subCategoryNames.get(x))
     #completecatname=['None' if v is None else v for v in completecatname]
     #strcat = ''.join(completecatname)
     ##############################################
