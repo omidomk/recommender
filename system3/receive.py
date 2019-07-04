@@ -1,4 +1,10 @@
 #!/usr/bin/python
+"""
+ArxivDigest user keywords receiver 
+===========
+
+:Author: Omid Mohammadi Kia
+"""
 import requests
 import json
   
@@ -32,4 +38,5 @@ def receive():
         with open('queries.json','w') as file:
             file.write(json.dumps(queries))
     return list;
+if __name__ == "__main__":
 receive()
