@@ -1,4 +1,10 @@
 #!/usr/bin/python
+"""
+Send recommendations to ArxivDigest
+===========
+
+:Author: Omid Mohammadi Kia
+"""
 import requests
 import json
 import retrieval
@@ -6,6 +12,8 @@ from typing import Any
 
 
 def send():  
+    #after retrieving articles from elastic we send it to arxivdigest
+    
     # Data needs to be replaced by article data!!!!!!!
     #get data from bm25
     #results={}  # type: Any
@@ -41,3 +49,5 @@ def send():
     print(response.json())
  
     return;
+if __name__ == "__main__":
+send()
